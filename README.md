@@ -35,3 +35,34 @@ The GitHub workflow uploads:
 
 - `website-image` → contains `artifacts/site-image.png`
 - `website-dist` → contains the built `dist/` website files
+
+## Docker deployment
+
+A local Docker image can run the static website in Docker Desktop.
+
+Build the image:
+
+```powershell
+docker build -t devops-e2e-site .
+```
+
+Run the container:
+
+```powershell
+docker run --rm -p 8080:80 devops-e2e-site
+```
+
+Open `http://localhost:8080` in your browser.
+
+## Docker Hub publishing from GitHub Actions
+
+To push the image to Docker Hub from GitHub Actions, set the following repository secrets:
+
+- `DOCKERHUB_USERNAME`
+- `DOCKERHUB_PASSWORD`
+
+The workflow will push the image to:
+
+`docker.io/<DOCKERHUB_USERNAME>/devops-e2e-site:latest`
+
+This happens only on `push` to the `main` branch.
