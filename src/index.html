@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps E2E Website</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <h1>Welcome to DevOps E2E</h1>
+        <p>A simple one-page website with a GitHub Actions workflow.</p>
+      </section>
+
+      <section class="content">
+        <h2>About this site</h2>
+        <p>
+          This page is built from a static source and tested automatically.
+          When GitHub Actions runs, it also generates an image artifact that can be downloaded.
+        </p>
+        <ul>
+          <li>Static HTML + CSS website</li>
+          <li>Node.js build and Jest tests</li>
+          <li>Automated image artifact generation in GitHub Actions</li>
+        </ul>
+      </section>
+
+      <footer>
+        <p id="footer-text"></p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

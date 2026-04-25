@@ -1,0 +1,15 @@
+{
+  "name": "devops-e2e-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Simple one-page website with GitHub Actions build/test and image artifact generation.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "npx jest --runInBand",
+    "generate-image": "node scripts/generate-image.js"
+  },
+  "devDependencies": {
+    "jimp": "^0.22.9",
+    "jest": "^29.7.0"
+  }
+}
